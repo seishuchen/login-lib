@@ -14,9 +14,9 @@ Path=`cd "$Path";pwd`                                 #change path to bin dir
 export LOGIN_LIB_PATH="$Path"                              #set login core lib path
 
 #登录主机IP地址
-host="10.20.250.248"
+host="10.20.30.40"
 #登录主机端口号
-port=18822
+port=22
 #登录用户名
 user="hesc"
 #用户登录密码
