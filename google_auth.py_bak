@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# coding:utf8
+
+#
+#file: google_auth.py
+#desc: 谷歌动态验证码获取实现方案（使用pytop库的最简单实现）
+# 安装pytop: pip install pytop
+#author: shuchen
+#email: h@iabc.io
+#
+ 
+import sys
+import pyotp
+
+def get_hotp_token(secret):
+    code = pyotp.TOTP(secret)
+    return code.now()
+ 
+def get_token():
+    secret = sys.argv[1];
+    return get_hotp_token(secret)
+
+def main():
+    return get_token()
+ 
+if __name__ =='__main__':
+    print main()
+ 
